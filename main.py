@@ -270,7 +270,7 @@ async def main():
         return
 
     try:
-        df = pd.read_csv('phone_numbers.csv')
+        df = pd.read_csv(os.getenv('CSV_PATH'))
 
         phone_column = None
         for col in ['phone', 'Phone', 'PHONE', 'phone_number', 'Phone Number', 'number']:
